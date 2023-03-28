@@ -10,7 +10,7 @@ var result = 0.0;
 var devider = grades.Count;
 foreach(var number in grades)
 {
-    result += number;
+    result += number; 
     
 }
 result /= grades.Count;
