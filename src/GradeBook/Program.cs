@@ -1,28 +1,25 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿sing System;
 using System.Collections.Generic;
 
-
-var grades = new List<double>() {12.7, 10.3, 6.11, 4.1};
-grades.Add(56.1);
-
-var result = 0.0;
-var devider = grades.Count;
-foreach(var number in grades)
+namespace GradeBook
 {
-    result += number; 
-    
-}
-result /= grades.Count;
-Console.WriteLine($"The averege grade is {result:N1}");
+       class Program
+       {
+        static void Main(string[] args)
+         {
+            var book = new Book("Scott's Grade Book");
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            var grades = new List<double>() {12.7,10.3,6.11,4.1 };
+            grades.Add(56.1);
 
-
-if(args.Length > 0)
-{
-    Console.WriteLine($"Hello, {args![0]}!");
+            var result = 0.0;
+            foreach(var number in grades)
+            {
+                result += number;
+            }
+            result /= grades.Count;
+            Console.WriteLine($"The average grade is  {result:N1}");
+         }
+    }
 }
-else
-{
-    Console.WriteLine("Hello !");
-}
- 
